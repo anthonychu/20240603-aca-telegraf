@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "20240603-aca-telegraf"
+version = "0.1.0"
+description = ""
+authors = ["Anthony Chu <anthony@anthonychu.ca>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+prometheus-client = "^0.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

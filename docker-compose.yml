@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  main:
+    image: 20240603acatelegraf
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+  telegraf:
+    image: acatelegraf
+    build:
+      context: .
+      dockerfile: ./Dockerfile.telegraf
+    environment:
+      - PROMETHEUS_URL=http://main:8000/
+      - APP_INSIGHTS_INSTRUMENTATION_KEY=
+    depends_on:
+      - main
